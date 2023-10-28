@@ -22,7 +22,7 @@ def show_weather_to_user(weather_data_list):
         print(f'The temperature is {temperature}')
 
 def show_weather():
-    city_name = input('Please type a city')
+    city_name = input('Please type a city: ')
     if city_name not in map_city_to_coords:
         print('We do not have coordinates for that city.')
     else:
@@ -33,8 +33,6 @@ def show_weather():
         
         
         show_weather_to_user(weather_data_list)
-
-
 
 def get_api_results(city):
     coords = map_city_to_coords[city]
